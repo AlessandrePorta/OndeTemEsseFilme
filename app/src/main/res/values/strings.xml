@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OndeTemEsseFilme</string>
+    <string name="button_login">Entrar</string>
+    <string name="button_login_anonimous">Anônimo</string>
+    <string name="login_email">Digite seu email</string>
+    <string name="login_password">Digite sua senha</string>
+    <string name="home_welcome">BEM VINDO!!!</string>
+    <string name="anonimous_name">Digite seu nome</string>
+    <string name="anonimous_button">Entrar</string>
+</resources>
