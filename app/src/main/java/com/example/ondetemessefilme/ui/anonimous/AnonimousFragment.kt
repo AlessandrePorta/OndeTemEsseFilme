@@ -1,5 +1,6 @@
-package com.example.ondetemessefilme.login.anonimous
+package com.example.ondetemessefilme.ui.anonimous
 
+import Movies
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -7,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.ondetemessefilme.R
-import com.example.ondetemessefilme.home.HomeActivity
+import com.example.ondetemessefilme.ui.home.HomeFragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
-class AnonimousActivity : AppCompatActivity() {
+class AnonimousFragment : AppCompatActivity() {
 
     private val loginAnonimousViewModel by lazy{ ViewModelProvider(this)[LoginAnonimousViewModel::class.java]}
 
@@ -33,13 +34,13 @@ class AnonimousActivity : AppCompatActivity() {
     }
 
 
-    fun validationLoginFeedback(message: String?) {
+    private fun validationLoginFeedback(message: String?) {
         message?.let {
             Snackbar.make(findViewById(R.id.anonimous_root), message, Snackbar.LENGTH_SHORT).show()
         }
     }
 
     fun anonimousLoginSucces(){
-        startActivity(Intent(this, HomeActivity::class.java))
+        startActivity(Intent(this, HomeFragment::class.java))
     }
 }

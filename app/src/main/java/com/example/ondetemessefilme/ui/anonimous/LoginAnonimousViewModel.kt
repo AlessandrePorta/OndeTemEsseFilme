@@ -1,4 +1,4 @@
-package com.example.ondetemessefilme.login.anonimous
+package com.example.ondetemessefilme.ui.anonimous
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

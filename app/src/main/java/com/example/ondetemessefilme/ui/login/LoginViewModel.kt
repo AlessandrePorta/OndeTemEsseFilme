@@ -1,4 +1,4 @@
-package com.example.ondetemessefilme.login.email
+package com.example.ondetemessefilme.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

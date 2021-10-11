@@ -3,23 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ondetemessefilme">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".application.Application"
         android:supportsRtl="true"
         android:theme="@style/Theme.OndeTemEsseFilme">
 
-        <activity android:name="com.example.ondetemessefilme.login.email.LoginActivity"
+        <activity android:name="com.example.ondetemessefilme.ui.login.LoginFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomeActivity"/>
-        <activity android:name=".login.anonimous.AnonimousActivity"/>
+        <activity android:name=".ui.home.HomeFragment"/>
+        <activity android:name=".ui.anonimous.AnonimousFragment"/>
     </application>
 
 </manifest>

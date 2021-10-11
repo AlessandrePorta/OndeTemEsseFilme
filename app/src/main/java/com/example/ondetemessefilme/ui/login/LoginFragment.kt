@@ -1,4 +1,4 @@
-package com.example.ondetemessefilme.login.email
+package com.example.ondetemessefilme.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.ondetemessefilme.R
-import com.example.ondetemessefilme.home.HomeActivity
-import com.example.ondetemessefilme.login.anonimous.AnonimousActivity
+import com.example.ondetemessefilme.ui.home.HomeFragment
+import com.example.ondetemessefilme.ui.anonimous.AnonimousFragment
 import com.google.android.material.snackbar.Snackbar
 
-class LoginActivity : AppCompatActivity() {
+class LoginFragment : AppCompatActivity() {
 
     private val loginViewModel by lazy{ViewModelProvider(this)[LoginViewModel::class.java]}
 
@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         })
 
         loginButton.setOnClickListener { loginViewModel.doLogin(LoginVO(email.text.toString(), password.text.toString())) }
-        anonimousButton.setOnClickListener{ startActivity(Intent(this, AnonimousActivity::class.java)) }
+        anonimousButton.setOnClickListener{ startActivity(Intent(this, AnonimousFragment::class.java)) }
     }
 
     fun validationLoginFeedback(message: String?) {
@@ -44,6 +44,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun loginSuccess() {
-        startActivity(Intent(this, HomeActivity::class.java))
+        startActivity(Intent(this, HomeFragment::class.java))
     }
 }
