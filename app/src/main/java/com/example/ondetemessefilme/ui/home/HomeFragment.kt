@@ -1,6 +1,5 @@
 package com.example.ondetemessefilme.ui.home
 
-import PageInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +22,7 @@ class HomeFragment : AppCompatActivity(){
         homeViewModel.fetchMovies()
     }
 
-    private fun setupMoviesList(movieResponse : PageInfo){
+    private fun setupMoviesList(movieResponse : HomePageInfo){
         val recyclerView = findViewById<RecyclerView>(R.id.movies_home_list)
         recyclerView.adapter = HomeAdapter(movieResponse.results, this)
     }

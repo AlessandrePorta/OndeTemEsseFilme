@@ -1,22 +1,17 @@
 package com.example.ondetemessefilme.ui.home
 
 import androidx.lifecycle.*
-import com.example.ondetemessefilme.data.network.Repository
-import kotlinx.coroutines.flow.collect
+import com.example.ondetemessefilme.utils.toLiveData
 
-class HomeViewModel (private val repository: Repository) : ViewModel() {
+class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {
 
     private val _homeMovies = MutableLiveData<Unit>()
 
     val homeMovies = _homeMovies.switchMap {
-        liveData {
-            repository.getMovies().collect {
-                emit(it)
-            }
-        }
+        homeRepository.getMovies().toLiveData()
     }
 
-    fun fetchMovies(){
+    fun fetchMovies() {
         _homeMovies.postValue(Unit)
     }
 }

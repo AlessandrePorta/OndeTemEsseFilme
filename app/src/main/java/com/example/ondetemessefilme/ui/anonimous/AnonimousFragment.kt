@@ -1,6 +1,5 @@
 package com.example.ondetemessefilme.ui.anonimous
 
-import Movies
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button

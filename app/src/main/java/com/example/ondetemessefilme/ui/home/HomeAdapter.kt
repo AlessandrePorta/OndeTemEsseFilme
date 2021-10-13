@@ -1,6 +1,5 @@
 package com.example.ondetemessefilme.ui.home
 
-import Movies
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.ondetemessefilme.R
 
 class HomeAdapter(
-    private val moviesList: List<Movies>,
+    private val homeMoviesList: List<HomeMovies>,
     private val context : Context
 ) :
     Adapter<HomeViewHolder>() {
@@ -23,9 +22,9 @@ class HomeAdapter(
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        val item = moviesList[position]
+        val item = homeMoviesList[position]
         holder.bind(item)
     }
 
-    override fun getItemCount() = moviesList.size
+    override fun getItemCount() = homeMoviesList.size
 }
