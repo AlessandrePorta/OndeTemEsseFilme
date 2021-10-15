@@ -14,8 +14,8 @@ class LoginViewModel : ViewModel() {
 
     private fun validateEmail(email: String, password: String) : LoginResponseVO {
         return when {
-            !email.validateEmail(email) -> LoginResponseVO(false, "Digite um email válido!")
-            password.validatePassword(password) -> LoginResponseVO(false, "Digite uma senha válida")
+            email.validateEmail() -> LoginResponseVO(false, "Digite um email válido!")
+            password.validatePassword() -> LoginResponseVO(false, "Digite uma senha válida")
             else -> {
                 LoginResponseVO(true)
             }

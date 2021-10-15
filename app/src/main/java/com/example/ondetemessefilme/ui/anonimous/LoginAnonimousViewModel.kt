@@ -13,7 +13,7 @@ class LoginAnonimousViewModel : ViewModel() {
 
     fun loginWithAnonimousAccount(name: String) : AnonimousResponseVO {
         return when {
-            name.validateName(name) -> AnonimousResponseVO(false, "Digite um nome")
+            name.validateName() -> AnonimousResponseVO(false, "Digite um nome")
             else -> {
                 AnonimousResponseVO(true)
             }

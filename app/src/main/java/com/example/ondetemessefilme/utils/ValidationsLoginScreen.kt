@@ -2,14 +2,14 @@ package com.example.ondetemessefilme.utils
 
 import android.util.Patterns
 
-fun String.validateEmail(email: CharSequence?): Boolean {
-    return email != null && Patterns.EMAIL_ADDRESS.matcher(email).matches()
+fun String.validateEmail(): Boolean {
+    return !this.isEmpty() && !this.isBlank() && this.contains("@") && this.contains(".")
 }
 
-fun String.validatePassword(password: CharSequence?): Boolean{
-    return password != null && password.contains(uppercase()) && password.contains(lowercase())
+fun String.validatePassword(): Boolean{
+    return !this.isBlank() && !this.isEmpty() && this.length >= 8
 }
 
-fun String.validateName(name: CharSequence?): Boolean{
-    return name != null && name.isEmpty() && name.isBlank()
+fun String.validateName(): Boolean{
+    return !this.isEmpty() && !this.isBlank()
 }
