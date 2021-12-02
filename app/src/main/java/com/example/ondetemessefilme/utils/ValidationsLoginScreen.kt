@@ -1,7 +1,5 @@
 package com.example.ondetemessefilme.utils
 
-import android.util.Patterns
-
 fun String.validateEmail(): Boolean {
     return !this.isEmpty() && !this.isBlank() && this.contains("@") && this.contains(".")
 }
