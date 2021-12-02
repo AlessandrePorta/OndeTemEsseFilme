@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.ondetemessefilme.R
 
 class HomeAdapter(
-    private val homeMoviesList: List<HomeMovies>,
+    val homeMoviesList: MutableList<HomeMovies>,
     private val context : Context
 ) :
     Adapter<HomeViewHolder>() {

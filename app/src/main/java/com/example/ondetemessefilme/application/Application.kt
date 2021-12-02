@@ -5,7 +5,7 @@ import com.example.ondetemessefilme.data.network.netWorkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-class Application : Application(){
+class Application : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -14,5 +14,4 @@ class Application : Application(){
             modules(listOf(appModule, netWorkModule))
         }
     }
-
 }

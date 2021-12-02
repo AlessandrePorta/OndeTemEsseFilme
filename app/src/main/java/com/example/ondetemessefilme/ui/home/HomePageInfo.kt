@@ -16,7 +16,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class HomePageInfo (
 	@SerializedName("page") val page : Int,
-	@SerializedName("results") val results : List<HomeMovies>,
+	@SerializedName("results") val results : MutableList<HomeMovies>,
 	@SerializedName("total_pages") val total_pages : Int,
 	@SerializedName("total_results") val total_results : Int
 )

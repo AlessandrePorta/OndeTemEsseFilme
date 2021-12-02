@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@color/black"
+        android:padding="4dp"
+        android:background="@drawable/title_border"
         android:textColor="@color/teal_200"
         android:textSize="20dp"
         android:text="OndeTemEsseFilme?"
@@ -19,15 +20,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/movies_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="O que deseja buscar"
+            android:iconifiedByDefault="false">
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filme"
+        android:textColor="@color/teal_200"
+        android:textSize="20sp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/title_border"
+        app:layout_constraintTop_toBottomOf="@id/rl_search"
+        app:layout_constraintStart_toStartOf="@id/rl_search"
+        app:layout_constraintEnd_toEndOf="@id/rl_search"
+        android:padding="4dp"
+
+        />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/movies_home_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="16dp"
+        android:background="@drawable/movies_border"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/tv_movies"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/movies_home_list"
         />
 
